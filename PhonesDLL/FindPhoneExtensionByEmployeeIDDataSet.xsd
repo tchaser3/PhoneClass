@@ -25,6 +25,7 @@
               <Mapping SourceColumn="TransactionID" DataSetColumn="TransactionID" />
               <Mapping SourceColumn="Extension" DataSetColumn="Extension" />
               <Mapping SourceColumn="DirectNumber" DataSetColumn="DirectNumber" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
               <Mapping SourceColumn="AssignedOffice" DataSetColumn="AssignedOffice" />
             </Mappings>
             <Sources />
@@ -43,6 +44,13 @@
               <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
               <xs:element name="Extension" msprop:Generator_ColumnVarNameInTable="columnExtension" msprop:Generator_ColumnPropNameInRow="Extension" msprop:Generator_ColumnPropNameInTable="ExtensionColumn" msprop:Generator_UserColumnName="Extension" type="xs:int" />
               <xs:element name="DirectNumber" msprop:Generator_ColumnVarNameInTable="columnDirectNumber" msprop:Generator_ColumnPropNameInRow="DirectNumber" msprop:Generator_ColumnPropNameInTable="DirectNumberColumn" msprop:Generator_UserColumnName="DirectNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />

@@ -289,6 +289,8 @@ namespace PhonesDLL {
             
             private global::System.Data.DataColumn columnLastName;
             
+            private global::System.Data.DataColumn columnPhoneNumber;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindPhoneExtensionsByLocationDataTable() {
@@ -364,6 +366,14 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhoneNumberColumn {
+                get {
+                    return this.columnPhoneNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +409,15 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindPhoneExtensionsByLocationRow AddFindPhoneExtensionsByLocationRow(int TransactionID, int Extension, string DirectNumber, string FirstName, string LastName) {
+            public FindPhoneExtensionsByLocationRow AddFindPhoneExtensionsByLocationRow(int TransactionID, int Extension, string DirectNumber, string FirstName, string LastName, string PhoneNumber) {
                 FindPhoneExtensionsByLocationRow rowFindPhoneExtensionsByLocationRow = ((FindPhoneExtensionsByLocationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionID,
                         Extension,
                         DirectNumber,
                         FirstName,
-                        LastName};
+                        LastName,
+                        PhoneNumber};
                 rowFindPhoneExtensionsByLocationRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindPhoneExtensionsByLocationRow);
                 return rowFindPhoneExtensionsByLocationRow;
@@ -441,6 +452,7 @@ namespace PhonesDLL {
                 this.columnDirectNumber = base.Columns["DirectNumber"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
+                this.columnPhoneNumber = base.Columns["PhoneNumber"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -456,6 +468,8 @@ namespace PhonesDLL {
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneNumber);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AllowDBNull = false;
@@ -467,6 +481,7 @@ namespace PhonesDLL {
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
                 this.columnLastName.MaxLength = 2147483647;
+                this.columnPhoneNumber.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -661,6 +676,35 @@ namespace PhonesDLL {
                     this[this.tableFindPhoneExtensionsByLocation.LastNameColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PhoneNumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindPhoneExtensionsByLocation.PhoneNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'FindPhoneExtensionsByLocation\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindPhoneExtensionsByLocation.PhoneNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPhoneNumberNull() {
+                return this.IsNull(this.tableFindPhoneExtensionsByLocation.PhoneNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPhoneNumberNull() {
+                this[this.tableFindPhoneExtensionsByLocation.PhoneNumberColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -827,6 +871,7 @@ namespace PhonesDLL.FindPhoneExtensionsByLocationDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("DirectNumber", "DirectNumber");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

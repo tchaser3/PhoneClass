@@ -285,6 +285,8 @@ namespace PhonesDLL {
             
             private global::System.Data.DataColumn columnDirectNumber;
             
+            private global::System.Data.DataColumn columnPhoneNumber;
+            
             private global::System.Data.DataColumn columnAssignedOffice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -346,6 +348,14 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhoneNumberColumn {
+                get {
+                    return this.columnPhoneNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn AssignedOfficeColumn {
                 get {
                     return this.columnAssignedOffice;
@@ -389,12 +399,13 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindPhoneExtensionByEmployeeIDRow AddFindPhoneExtensionByEmployeeIDRow(int TransactionID, int Extension, string DirectNumber, string AssignedOffice) {
+            public FindPhoneExtensionByEmployeeIDRow AddFindPhoneExtensionByEmployeeIDRow(int TransactionID, int Extension, string DirectNumber, string PhoneNumber, string AssignedOffice) {
                 FindPhoneExtensionByEmployeeIDRow rowFindPhoneExtensionByEmployeeIDRow = ((FindPhoneExtensionByEmployeeIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionID,
                         Extension,
                         DirectNumber,
+                        PhoneNumber,
                         AssignedOffice};
                 rowFindPhoneExtensionByEmployeeIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindPhoneExtensionByEmployeeIDRow);
@@ -428,6 +439,7 @@ namespace PhonesDLL {
                 this.columnTransactionID = base.Columns["TransactionID"];
                 this.columnExtension = base.Columns["Extension"];
                 this.columnDirectNumber = base.Columns["DirectNumber"];
+                this.columnPhoneNumber = base.Columns["PhoneNumber"];
                 this.columnAssignedOffice = base.Columns["AssignedOffice"];
             }
             
@@ -440,6 +452,8 @@ namespace PhonesDLL {
                 base.Columns.Add(this.columnExtension);
                 this.columnDirectNumber = new global::System.Data.DataColumn("DirectNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDirectNumber);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneNumber);
                 this.columnAssignedOffice = new global::System.Data.DataColumn("AssignedOffice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssignedOffice);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -449,6 +463,7 @@ namespace PhonesDLL {
                 this.columnExtension.AllowDBNull = false;
                 this.columnDirectNumber.AllowDBNull = false;
                 this.columnDirectNumber.MaxLength = 2147483647;
+                this.columnPhoneNumber.MaxLength = 2147483647;
                 this.columnAssignedOffice.AllowDBNull = false;
                 this.columnAssignedOffice.MaxLength = 2147483647;
             }
@@ -626,6 +641,23 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PhoneNumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindPhoneExtensionByEmployeeID.PhoneNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'FindPhoneExtensionByEmployeeID\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindPhoneExtensionByEmployeeID.PhoneNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string AssignedOffice {
                 get {
                     return ((string)(this[this.tableFindPhoneExtensionByEmployeeID.AssignedOfficeColumn]));
@@ -633,6 +665,18 @@ namespace PhonesDLL {
                 set {
                     this[this.tableFindPhoneExtensionByEmployeeID.AssignedOfficeColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPhoneNumberNull() {
+                return this.IsNull(this.tableFindPhoneExtensionByEmployeeID.PhoneNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPhoneNumberNull() {
+                this[this.tableFindPhoneExtensionByEmployeeID.PhoneNumberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -798,6 +842,7 @@ namespace PhonesDLL.FindPhoneExtensionByEmployeeIDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
             tableMapping.ColumnMappings.Add("Extension", "Extension");
             tableMapping.ColumnMappings.Add("DirectNumber", "DirectNumber");
+            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             tableMapping.ColumnMappings.Add("AssignedOffice", "AssignedOffice");
             this._adapter.TableMappings.Add(tableMapping);
         }
