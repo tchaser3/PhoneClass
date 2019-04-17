@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9449913D-3224-4FA9-B448-4AA7B7A5D8DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhonesDLL</RootNamespace>
+    <AssemblyName>PhonesDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CellPhoneListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindPhoneByExtensionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPhoneByExtensionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindPhoneExtensionByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPhoneExtensionByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindPhoneExtensionsByLocationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPhoneExtensionsByLocationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedExtensionsByLastNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedExtensionsByLastNameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedPhoneListByExtensionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedPhoneListByExtensionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCellPhoneEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCellPhoneEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertPhoneEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertPhoneEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhoneListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhonesClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeePhoneEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeePhoneEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePhoneExtensionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdatePhoneExtensionEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CellPhoneListDataSet.xsc">
+      <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CellPhoneListDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CellPhoneListDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CellPhoneListDataSet.xss">
+      <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneByExtensionDataSet.xsc">
+      <DependentUpon>FindPhoneByExtensionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneByExtensionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPhoneByExtensionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPhoneByExtensionDataSet.xss">
+      <DependentUpon>FindPhoneByExtensionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneExtensionByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindPhoneExtensionByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneExtensionByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPhoneExtensionByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPhoneExtensionByEmployeeIDDataSet.xss">
+      <DependentUpon>FindPhoneExtensionByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneExtensionsByLocationDataSet.xsc">
+      <DependentUpon>FindPhoneExtensionsByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneExtensionsByLocationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPhoneExtensionsByLocationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPhoneExtensionsByLocationDataSet.xss">
+      <DependentUpon>FindPhoneExtensionsByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedExtensionsByLastNameDataSet.xsc">
+      <DependentUpon>FindSortedExtensionsByLastNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedExtensionsByLastNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedExtensionsByLastNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedExtensionsByLastNameDataSet.xss">
+      <DependentUpon>FindSortedExtensionsByLastNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedPhoneListByExtensionDataSet.xsc">
+      <DependentUpon>FindSortedPhoneListByExtensionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedPhoneListByExtensionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedPhoneListByExtensionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedPhoneListByExtensionDataSet.xss">
+      <DependentUpon>FindSortedPhoneListByExtensionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCellPhoneEntry.xsc">
+      <DependentUpon>InsertCellPhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCellPhoneEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCellPhoneEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCellPhoneEntry.xss">
+      <DependentUpon>InsertCellPhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertPhoneEntry.xsc">
+      <DependentUpon>InsertPhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertPhoneEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertPhoneEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertPhoneEntry.xss">
+      <DependentUpon>InsertPhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="PhoneListDataSet.xsc">
+      <DependentUpon>PhoneListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PhoneListDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhoneListDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PhoneListDataSet.xss">
+      <DependentUpon>PhoneListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateEmployeePhoneEntry.xsc">
+      <DependentUpon>UpdateEmployeePhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeePhoneEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateEmployeePhoneEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateEmployeePhoneEntry.xss">
+      <DependentUpon>UpdateEmployeePhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePhoneExtensionEntry.xsc">
+      <DependentUpon>UpdatePhoneExtensionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePhoneExtensionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdatePhoneExtensionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdatePhoneExtensionEntry.xss">
+      <DependentUpon>UpdatePhoneExtensionEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
