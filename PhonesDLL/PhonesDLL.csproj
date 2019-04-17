@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindCellPhoneByLastFourDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCellPhoneByLastFourDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindPhoneByExtensionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +102,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCellPhoneUserEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCellPhoneUserEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateEmployeePhoneEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +130,17 @@
     </None>
     <None Include="CellPhoneListDataSet.xss">
       <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCellPhoneByLastFourDataSet.xsc">
+      <DependentUpon>FindCellPhoneByLastFourDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCellPhoneByLastFourDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCellPhoneByLastFourDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCellPhoneByLastFourDataSet.xss">
+      <DependentUpon>FindCellPhoneByLastFourDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindPhoneByExtensionDataSet.xsc">
       <DependentUpon>FindPhoneByExtensionDataSet.xsd</DependentUpon>
@@ -212,6 +233,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateCellPhoneUserEntry.xsc">
+      <DependentUpon>UpdateCellPhoneUserEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCellPhoneUserEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCellPhoneUserEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCellPhoneUserEntry.xss">
+      <DependentUpon>UpdateCellPhoneUserEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateEmployeePhoneEntry.xsc">
       <DependentUpon>UpdateEmployeePhoneEntry.xsd</DependentUpon>

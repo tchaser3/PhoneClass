@@ -47,6 +47,42 @@ namespace PhonesDLL
 
         InsertCellPhoneEntryTableAdapters.QueriesTableAdapter aInsertCellPhoneTableAdapter;
 
+        UpdateCellPhoneUserEntryTableAdapters.QueriesTableAdapter aUpdateCellPhoneUserTableAdapter;
+
+        FindCellPhoneByLastFourDataSet aFindCellPhoneByLastFourDataSet;
+        FindCellPhoneByLastFourDataSetTableAdapters.FindCellPhoneByLastFourTableAdapter aFindCellPhoneByLastFourTableAdapter;
+
+        public FindCellPhoneByLastFourDataSet FindCellPhoneByLastFour(string strPhoneNumber)
+        {
+            try
+            {
+                aFindCellPhoneByLastFourDataSet = new FindCellPhoneByLastFourDataSet();
+                aFindCellPhoneByLastFourTableAdapter = new FindCellPhoneByLastFourDataSetTableAdapters.FindCellPhoneByLastFourTableAdapter();
+                aFindCellPhoneByLastFourTableAdapter.Fill(aFindCellPhoneByLastFourDataSet.FindCellPhoneByLastFour, strPhoneNumber);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phone Class // Find Cell Phone By Last Four " + Ex.Message);
+            }
+
+            return aFindCellPhoneByLastFourDataSet;
+        }
+        public bool UpdateCellPhoneUser(int intPhoneID, int intEmployeeID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateCellPhoneUserTableAdapter = new UpdateCellPhoneUserEntryTableAdapters.QueriesTableAdapter();
+                aUpdateCellPhoneUserTableAdapter.UpdateCellPhoneUser(intPhoneID, intEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phone Class // Update Cell Phone User " + Ex.Message);
+            }
+
+            return blnFatalError;
+        }
         public bool InsertCellPhone(string strPhoneNumber, int intEmployeeID, int intWarehouseID, string strPhoneNotes)
         {
             bool blnFatalError = false;
