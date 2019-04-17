@@ -287,6 +287,8 @@ namespace PhonesDLL {
             
             private global::System.Data.DataColumn columnDirectNumber;
             
+            private global::System.Data.DataColumn columnPhoneNumber;
+            
             private global::System.Data.DataColumn columnWarehouseID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -356,6 +358,14 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhoneNumberColumn {
+                get {
+                    return this.columnPhoneNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn WarehouseIDColumn {
                 get {
                     return this.columnWarehouseID;
@@ -399,13 +409,14 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionRow AddFindSortedPhoneListByExtensionRow(int Extension, string FirstName, string LastName, string DirectNumber, int WarehouseID) {
+            public FindSortedPhoneListByExtensionRow AddFindSortedPhoneListByExtensionRow(int Extension, string FirstName, string LastName, string DirectNumber, string PhoneNumber, int WarehouseID) {
                 FindSortedPhoneListByExtensionRow rowFindSortedPhoneListByExtensionRow = ((FindSortedPhoneListByExtensionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Extension,
                         FirstName,
                         LastName,
                         DirectNumber,
+                        PhoneNumber,
                         WarehouseID};
                 rowFindSortedPhoneListByExtensionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindSortedPhoneListByExtensionRow);
@@ -433,6 +444,7 @@ namespace PhonesDLL {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnDirectNumber = base.Columns["DirectNumber"];
+                this.columnPhoneNumber = base.Columns["PhoneNumber"];
                 this.columnWarehouseID = base.Columns["WarehouseID"];
             }
             
@@ -447,6 +459,8 @@ namespace PhonesDLL {
                 base.Columns.Add(this.columnLastName);
                 this.columnDirectNumber = new global::System.Data.DataColumn("DirectNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDirectNumber);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneNumber);
                 this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarehouseID);
                 this.columnExtension.AllowDBNull = false;
@@ -456,6 +470,7 @@ namespace PhonesDLL {
                 this.columnLastName.MaxLength = 2147483647;
                 this.columnDirectNumber.AllowDBNull = false;
                 this.columnDirectNumber.MaxLength = 2147483647;
+                this.columnPhoneNumber.MaxLength = 2147483647;
                 this.columnWarehouseID.AllowDBNull = false;
             }
             
@@ -643,6 +658,23 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PhoneNumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindSortedPhoneListByExtension.PhoneNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'FindSortedPhoneListByExtension\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindSortedPhoneListByExtension.PhoneNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int WarehouseID {
                 get {
                     return ((int)(this[this.tableFindSortedPhoneListByExtension.WarehouseIDColumn]));
@@ -650,6 +682,18 @@ namespace PhonesDLL {
                 set {
                     this[this.tableFindSortedPhoneListByExtension.WarehouseIDColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPhoneNumberNull() {
+                return this.IsNull(this.tableFindSortedPhoneListByExtension.PhoneNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPhoneNumberNull() {
+                this[this.tableFindSortedPhoneListByExtension.PhoneNumberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -816,6 +860,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("DirectNumber", "DirectNumber");
+            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
             this._adapter.TableMappings.Add(tableMapping);
         }

@@ -25,6 +25,7 @@
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="DirectNumber" DataSetColumn="DirectNumber" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
               <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
             </Mappings>
             <Sources />
@@ -56,6 +57,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="DirectNumber" msprop:Generator_ColumnVarNameInTable="columnDirectNumber" msprop:Generator_ColumnPropNameInRow="DirectNumber" msprop:Generator_ColumnPropNameInTable="DirectNumberColumn" msprop:Generator_UserColumnName="DirectNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />

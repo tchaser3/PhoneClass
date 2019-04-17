@@ -26,6 +26,7 @@
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="DirectNumber" DataSetColumn="DirectNumber" />
               <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -37,7 +38,7 @@
   <xs:element name="FindSortedExtensionsByLastNameDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindSortedExtensionsByLastNameDataSet" msprop:Generator_UserDSName="FindSortedExtensionsByLastNameDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindSortedExtensionsByLastName" msprop:Generator_TableClassName="FindSortedExtensionsByLastNameDataTable" msprop:Generator_TableVarName="tableFindSortedExtensionsByLastName" msprop:Generator_TablePropName="FindSortedExtensionsByLastName" msprop:Generator_RowDeletingName="FindSortedExtensionsByLastNameRowDeleting" msprop:Generator_RowChangingName="FindSortedExtensionsByLastNameRowChanging" msprop:Generator_RowEvHandlerName="FindSortedExtensionsByLastNameRowChangeEventHandler" msprop:Generator_RowDeletedName="FindSortedExtensionsByLastNameRowDeleted" msprop:Generator_UserTableName="FindSortedExtensionsByLastName" msprop:Generator_RowChangedName="FindSortedExtensionsByLastNameRowChanged" msprop:Generator_RowEvArgName="FindSortedExtensionsByLastNameRowChangeEvent" msprop:Generator_RowClassName="FindSortedExtensionsByLastNameRow">
+        <xs:element name="FindSortedExtensionsByLastName" msprop:Generator_TableClassName="FindSortedExtensionsByLastNameDataTable" msprop:Generator_TableVarName="tableFindSortedExtensionsByLastName" msprop:Generator_RowChangedName="FindSortedExtensionsByLastNameRowChanged" msprop:Generator_TablePropName="FindSortedExtensionsByLastName" msprop:Generator_RowDeletingName="FindSortedExtensionsByLastNameRowDeleting" msprop:Generator_RowChangingName="FindSortedExtensionsByLastNameRowChanging" msprop:Generator_RowEvHandlerName="FindSortedExtensionsByLastNameRowChangeEventHandler" msprop:Generator_RowDeletedName="FindSortedExtensionsByLastNameRowDeleted" msprop:Generator_RowClassName="FindSortedExtensionsByLastNameRow" msprop:Generator_UserTableName="FindSortedExtensionsByLastName" msprop:Generator_RowEvArgName="FindSortedExtensionsByLastNameRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Extension" msprop:Generator_ColumnVarNameInTable="columnExtension" msprop:Generator_ColumnPropNameInRow="Extension" msprop:Generator_ColumnPropNameInTable="ExtensionColumn" msprop:Generator_UserColumnName="Extension" type="xs:int" />
@@ -63,6 +64,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="WarehouseID" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" />
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

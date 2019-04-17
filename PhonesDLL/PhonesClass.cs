@@ -54,7 +54,7 @@ namespace PhonesDLL
             try
             {
                 aInsertCellPhoneTableAdapter = new InsertCellPhoneEntryTableAdapters.QueriesTableAdapter();
-                aInsertCellPhoneTableAdapter.InsertCellPhone(strPhoneNumnber, intEmployeeID, intWarehouseID, strPhoneNotes);
+                aInsertCellPhoneTableAdapter.InsertCellPhone(strPhoneNumber, intEmployeeID, intWarehouseID, strPhoneNotes);
             }
             catch (Exception Ex)
             {
