@@ -279,17 +279,21 @@ namespace PhonesDLL {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class FindSortedExtensionsByLastNameDataTable : global::System.Data.TypedTableBase<FindSortedExtensionsByLastNameRow> {
             
-            private global::System.Data.DataColumn columnExtension;
-            
             private global::System.Data.DataColumn columnFirstName;
             
             private global::System.Data.DataColumn columnLastName;
             
-            private global::System.Data.DataColumn columnDirectNumber;
+            private global::System.Data.DataColumn columnHomeOffice;
+            
+            private global::System.Data.DataColumn columnEmployeeType;
+            
+            private global::System.Data.DataColumn columnExtension;
             
             private global::System.Data.DataColumn columnPhoneNumber;
             
-            private global::System.Data.DataColumn columnWarehouseID;
+            private global::System.Data.DataColumn columnDirectNumber;
+            
+            private global::System.Data.DataColumn columnHomeOffice1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -326,14 +330,6 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExtensionColumn {
-                get {
-                    return this.columnExtension;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn FirstNameColumn {
                 get {
                     return this.columnFirstName;
@@ -350,9 +346,25 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DirectNumberColumn {
+            public global::System.Data.DataColumn HomeOfficeColumn {
                 get {
-                    return this.columnDirectNumber;
+                    return this.columnHomeOffice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeTypeColumn {
+                get {
+                    return this.columnEmployeeType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ExtensionColumn {
+                get {
+                    return this.columnExtension;
                 }
             }
             
@@ -366,9 +378,17 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WarehouseIDColumn {
+            public global::System.Data.DataColumn DirectNumberColumn {
                 get {
-                    return this.columnWarehouseID;
+                    return this.columnDirectNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HomeOffice1Column {
+                get {
+                    return this.columnHomeOffice1;
                 }
             }
             
@@ -409,15 +429,17 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedExtensionsByLastNameRow AddFindSortedExtensionsByLastNameRow(int Extension, string FirstName, string LastName, string DirectNumber, string PhoneNumber, int WarehouseID) {
+            public FindSortedExtensionsByLastNameRow AddFindSortedExtensionsByLastNameRow(string FirstName, string LastName, string HomeOffice, string EmployeeType, int Extension, string PhoneNumber, string DirectNumber, string HomeOffice1) {
                 FindSortedExtensionsByLastNameRow rowFindSortedExtensionsByLastNameRow = ((FindSortedExtensionsByLastNameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Extension,
                         FirstName,
                         LastName,
-                        DirectNumber,
+                        HomeOffice,
+                        EmployeeType,
+                        Extension,
                         PhoneNumber,
-                        WarehouseID};
+                        DirectNumber,
+                        HomeOffice1};
                 rowFindSortedExtensionsByLastNameRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindSortedExtensionsByLastNameRow);
                 return rowFindSortedExtensionsByLastNameRow;
@@ -440,38 +462,47 @@ namespace PhonesDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnExtension = base.Columns["Extension"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
-                this.columnDirectNumber = base.Columns["DirectNumber"];
+                this.columnHomeOffice = base.Columns["HomeOffice"];
+                this.columnEmployeeType = base.Columns["EmployeeType"];
+                this.columnExtension = base.Columns["Extension"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnWarehouseID = base.Columns["WarehouseID"];
+                this.columnDirectNumber = base.Columns["DirectNumber"];
+                this.columnHomeOffice1 = base.Columns["HomeOffice1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnExtension = new global::System.Data.DataColumn("Extension", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExtension);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
-                this.columnDirectNumber = new global::System.Data.DataColumn("DirectNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDirectNumber);
+                this.columnHomeOffice = new global::System.Data.DataColumn("HomeOffice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHomeOffice);
+                this.columnEmployeeType = new global::System.Data.DataColumn("EmployeeType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeType);
+                this.columnExtension = new global::System.Data.DataColumn("Extension", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExtension);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
-                this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWarehouseID);
-                this.columnExtension.AllowDBNull = false;
+                this.columnDirectNumber = new global::System.Data.DataColumn("DirectNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDirectNumber);
+                this.columnHomeOffice1 = new global::System.Data.DataColumn("HomeOffice1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHomeOffice1);
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
                 this.columnLastName.MaxLength = 2147483647;
-                this.columnDirectNumber.AllowDBNull = false;
-                this.columnDirectNumber.MaxLength = 2147483647;
+                this.columnHomeOffice.AllowDBNull = false;
+                this.columnHomeOffice.MaxLength = 2147483647;
+                this.columnEmployeeType.AllowDBNull = false;
+                this.columnEmployeeType.MaxLength = 2147483647;
                 this.columnPhoneNumber.MaxLength = 2147483647;
-                this.columnWarehouseID.AllowDBNull = false;
+                this.columnDirectNumber.MaxLength = 2147483647;
+                this.columnHomeOffice1.AllowDBNull = false;
+                this.columnHomeOffice1.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -614,17 +645,6 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Extension {
-                get {
-                    return ((int)(this[this.tableFindSortedExtensionsByLastName.ExtensionColumn]));
-                }
-                set {
-                    this[this.tableFindSortedExtensionsByLastName.ExtensionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string FirstName {
                 get {
                     return ((string)(this[this.tableFindSortedExtensionsByLastName.FirstNameColumn]));
@@ -647,12 +667,40 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DirectNumber {
+            public string HomeOffice {
                 get {
-                    return ((string)(this[this.tableFindSortedExtensionsByLastName.DirectNumberColumn]));
+                    return ((string)(this[this.tableFindSortedExtensionsByLastName.HomeOfficeColumn]));
                 }
                 set {
-                    this[this.tableFindSortedExtensionsByLastName.DirectNumberColumn] = value;
+                    this[this.tableFindSortedExtensionsByLastName.HomeOfficeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EmployeeType {
+                get {
+                    return ((string)(this[this.tableFindSortedExtensionsByLastName.EmployeeTypeColumn]));
+                }
+                set {
+                    this[this.tableFindSortedExtensionsByLastName.EmployeeTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Extension {
+                get {
+                    try {
+                        return ((int)(this[this.tableFindSortedExtensionsByLastName.ExtensionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Extension\' in table \'FindSortedExtensionsByLastName\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindSortedExtensionsByLastName.ExtensionColumn] = value;
                 }
             }
             
@@ -675,13 +723,42 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int WarehouseID {
+            public string DirectNumber {
                 get {
-                    return ((int)(this[this.tableFindSortedExtensionsByLastName.WarehouseIDColumn]));
+                    try {
+                        return ((string)(this[this.tableFindSortedExtensionsByLastName.DirectNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DirectNumber\' in table \'FindSortedExtensionsByLastName\' is " +
+                                "DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableFindSortedExtensionsByLastName.WarehouseIDColumn] = value;
+                    this[this.tableFindSortedExtensionsByLastName.DirectNumberColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string HomeOffice1 {
+                get {
+                    return ((string)(this[this.tableFindSortedExtensionsByLastName.HomeOffice1Column]));
+                }
+                set {
+                    this[this.tableFindSortedExtensionsByLastName.HomeOffice1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExtensionNull() {
+                return this.IsNull(this.tableFindSortedExtensionsByLastName.ExtensionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExtensionNull() {
+                this[this.tableFindSortedExtensionsByLastName.ExtensionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,6 +771,18 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPhoneNumberNull() {
                 this[this.tableFindSortedExtensionsByLastName.PhoneNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDirectNumberNull() {
+                return this.IsNull(this.tableFindSortedExtensionsByLastName.DirectNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDirectNumberNull() {
+                this[this.tableFindSortedExtensionsByLastName.DirectNumberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -856,12 +945,14 @@ namespace PhonesDLL.FindSortedExtensionsByLastNameDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FindSortedExtensionsByLastName";
-            tableMapping.ColumnMappings.Add("Extension", "Extension");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("DirectNumber", "DirectNumber");
+            tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
+            tableMapping.ColumnMappings.Add("EmployeeType", "EmployeeType");
+            tableMapping.ColumnMappings.Add("Extension", "Extension");
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
+            tableMapping.ColumnMappings.Add("DirectNumber", "DirectNumber");
+            tableMapping.ColumnMappings.Add("HomeOffice1", "HomeOffice1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
