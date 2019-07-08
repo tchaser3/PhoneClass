@@ -55,6 +55,24 @@ namespace PhonesDLL
         FindOpenCellPhonesDataSet aFindOpenCellPhonesDataSet;
         FindOpenCellPhonesDataSetTableAdapters.FindOpenCellPhonesTableAdapter aFindOpenCellPhonesTableAdapter;
 
+        FindCellPhoneHistoryByPhoneNumberDataSet aFindCellPhoneHistoryByPhoneNumberDataSet;
+        FindCellPhoneHistoryByPhoneNumberDataSetTableAdapters.FindCellPhoneHistoryByPhoneNumberTableAdapter aFindCellPhoneHistoryByPhoneNumberTableAdapter;
+
+        public FindCellPhoneHistoryByPhoneNumberDataSet FindCellPhoneHistoryByPhoneNumber(string strPhoneNumber)
+        {
+            try
+            {
+                aFindCellPhoneHistoryByPhoneNumberDataSet = new FindCellPhoneHistoryByPhoneNumberDataSet();
+                aFindCellPhoneHistoryByPhoneNumberTableAdapter = new FindCellPhoneHistoryByPhoneNumberDataSetTableAdapters.FindCellPhoneHistoryByPhoneNumberTableAdapter();
+                aFindCellPhoneHistoryByPhoneNumberTableAdapter.Fill(aFindCellPhoneHistoryByPhoneNumberDataSet.FindCellPhoneHistoryByPhoneNumber, strPhoneNumber);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phone Class // Find Cell PHone History By Phone Number " + Ex.Message);
+            }
+
+            return aFindCellPhoneHistoryByPhoneNumberDataSet;
+        }
         public FindOpenCellPhonesDataSet FindOpenCellPhones()
         {
             try
