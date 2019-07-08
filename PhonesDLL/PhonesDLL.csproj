@@ -55,6 +55,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindCellPhoneByLastFourDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindOpenCellPhonesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenCellPhonesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindPhoneByExtensionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +146,17 @@
     </None>
     <None Include="FindCellPhoneByLastFourDataSet.xss">
       <DependentUpon>FindCellPhoneByLastFourDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenCellPhonesDataSet.xsc">
+      <DependentUpon>FindOpenCellPhonesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenCellPhonesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenCellPhonesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenCellPhonesDataSet.xss">
+      <DependentUpon>FindOpenCellPhonesDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindPhoneByExtensionDataSet.xsc">
       <DependentUpon>FindPhoneByExtensionDataSet.xsd</DependentUpon>

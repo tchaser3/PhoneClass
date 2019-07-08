@@ -52,6 +52,24 @@ namespace PhonesDLL
         FindCellPhoneByLastFourDataSet aFindCellPhoneByLastFourDataSet;
         FindCellPhoneByLastFourDataSetTableAdapters.FindCellPhoneByLastFourTableAdapter aFindCellPhoneByLastFourTableAdapter;
 
+        FindOpenCellPhonesDataSet aFindOpenCellPhonesDataSet;
+        FindOpenCellPhonesDataSetTableAdapters.FindOpenCellPhonesTableAdapter aFindOpenCellPhonesTableAdapter;
+
+        public FindOpenCellPhonesDataSet FindOpenCellPhones()
+        {
+            try
+            {
+                aFindOpenCellPhonesDataSet = new FindOpenCellPhonesDataSet();
+                aFindOpenCellPhonesTableAdapter = new FindOpenCellPhonesDataSetTableAdapters.FindOpenCellPhonesTableAdapter();
+                aFindOpenCellPhonesTableAdapter.Fill(aFindOpenCellPhonesDataSet.FindOpenCellPhones);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phones Class // Find Open Cell Phones " + Ex.Message);
+            }
+
+            return aFindOpenCellPhonesDataSet;
+        }
         public FindCellPhoneByLastFourDataSet FindCellPhoneByLastFour(string strPhoneNumber)
         {
             try

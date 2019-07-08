@@ -20,17 +20,17 @@ namespace PhonesDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindSortedPhoneListByExtensionDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindOpenCellPhonesDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindSortedPhoneListByExtensionDataSet : global::System.Data.DataSet {
+    public partial class FindOpenCellPhonesDataSet : global::System.Data.DataSet {
         
-        private FindSortedPhoneListByExtensionDataTable tableFindSortedPhoneListByExtension;
+        private FindOpenCellPhonesDataTable tableFindOpenCellPhones;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindSortedPhoneListByExtensionDataSet() {
+        public FindOpenCellPhonesDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PhonesDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected FindSortedPhoneListByExtensionDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindOpenCellPhonesDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PhonesDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindSortedPhoneListByExtension"] != null)) {
-                    base.Tables.Add(new FindSortedPhoneListByExtensionDataTable(ds.Tables["FindSortedPhoneListByExtension"]));
+                if ((ds.Tables["FindOpenCellPhones"] != null)) {
+                    base.Tables.Add(new FindOpenCellPhonesDataTable(ds.Tables["FindOpenCellPhones"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PhonesDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindSortedPhoneListByExtensionDataTable FindSortedPhoneListByExtension {
+        public FindOpenCellPhonesDataTable FindOpenCellPhones {
             get {
-                return this.tableFindSortedPhoneListByExtension;
+                return this.tableFindOpenCellPhones;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindSortedPhoneListByExtensionDataSet cln = ((FindSortedPhoneListByExtensionDataSet)(base.Clone()));
+            FindOpenCellPhonesDataSet cln = ((FindOpenCellPhonesDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PhonesDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindSortedPhoneListByExtension"] != null)) {
-                    base.Tables.Add(new FindSortedPhoneListByExtensionDataTable(ds.Tables["FindSortedPhoneListByExtension"]));
+                if ((ds.Tables["FindOpenCellPhones"] != null)) {
+                    base.Tables.Add(new FindOpenCellPhonesDataTable(ds.Tables["FindOpenCellPhones"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindSortedPhoneListByExtension = ((FindSortedPhoneListByExtensionDataTable)(base.Tables["FindSortedPhoneListByExtension"]));
+            this.tableFindOpenCellPhones = ((FindOpenCellPhonesDataTable)(base.Tables["FindOpenCellPhones"]));
             if ((initTable == true)) {
-                if ((this.tableFindSortedPhoneListByExtension != null)) {
-                    this.tableFindSortedPhoneListByExtension.InitVars();
+                if ((this.tableFindOpenCellPhones != null)) {
+                    this.tableFindOpenCellPhones.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindSortedPhoneListByExtensionDataSet";
+            this.DataSetName = "FindOpenCellPhonesDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindSortedPhoneListByExtensionDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindOpenCellPhonesDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindSortedPhoneListByExtension = new FindSortedPhoneListByExtensionDataTable();
-            base.Tables.Add(this.tableFindSortedPhoneListByExtension);
+            this.tableFindOpenCellPhones = new FindOpenCellPhonesDataTable();
+            base.Tables.Add(this.tableFindOpenCellPhones);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindSortedPhoneListByExtension() {
+        private bool ShouldSerializeFindOpenCellPhones() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindSortedPhoneListByExtensionDataSet ds = new FindSortedPhoneListByExtensionDataSet();
+            FindOpenCellPhonesDataSet ds = new FindOpenCellPhonesDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,27 @@ namespace PhonesDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindSortedPhoneListByExtensionRowChangeEventHandler(object sender, FindSortedPhoneListByExtensionRowChangeEvent e);
+        public delegate void FindOpenCellPhonesRowChangeEventHandler(object sender, FindOpenCellPhonesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindSortedPhoneListByExtensionDataTable : global::System.Data.TypedTableBase<FindSortedPhoneListByExtensionRow> {
+        public partial class FindOpenCellPhonesDataTable : global::System.Data.TypedTableBase<FindOpenCellPhonesRow> {
+            
+            private global::System.Data.DataColumn columnPhoneID;
+            
+            private global::System.Data.DataColumn columnPhoneNumber;
             
             private global::System.Data.DataColumn columnFirstName;
             
             private global::System.Data.DataColumn columnLastName;
             
-            private global::System.Data.DataColumn columnHomeOffice;
-            
-            private global::System.Data.DataColumn columnEmployeeType;
-            
-            private global::System.Data.DataColumn columnExtension;
-            
-            private global::System.Data.DataColumn columnPhoneNumber;
-            
-            private global::System.Data.DataColumn columnDirectNumber;
-            
-            private global::System.Data.DataColumn columnHomeOffice1;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionDataTable() {
-                this.TableName = "FindSortedPhoneListByExtension";
+            public FindOpenCellPhonesDataTable() {
+                this.TableName = "FindOpenCellPhones";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +298,7 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindSortedPhoneListByExtensionDataTable(global::System.Data.DataTable table) {
+            internal FindOpenCellPhonesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,9 +315,25 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindSortedPhoneListByExtensionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindOpenCellPhonesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhoneIDColumn {
+                get {
+                    return this.columnPhoneID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhoneNumberColumn {
+                get {
+                    return this.columnPhoneNumber;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -346,54 +354,6 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn HomeOfficeColumn {
-                get {
-                    return this.columnHomeOffice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EmployeeTypeColumn {
-                get {
-                    return this.columnEmployeeType;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExtensionColumn {
-                get {
-                    return this.columnExtension;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberColumn {
-                get {
-                    return this.columnPhoneNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DirectNumberColumn {
-                get {
-                    return this.columnDirectNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn HomeOffice1Column {
-                get {
-                    return this.columnHomeOffice1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -403,52 +363,55 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionRow this[int index] {
+            public FindOpenCellPhonesRow this[int index] {
                 get {
-                    return ((FindSortedPhoneListByExtensionRow)(this.Rows[index]));
+                    return ((FindOpenCellPhonesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindSortedPhoneListByExtensionRowChangeEventHandler FindSortedPhoneListByExtensionRowChanging;
+            public event FindOpenCellPhonesRowChangeEventHandler FindOpenCellPhonesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindSortedPhoneListByExtensionRowChangeEventHandler FindSortedPhoneListByExtensionRowChanged;
+            public event FindOpenCellPhonesRowChangeEventHandler FindOpenCellPhonesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindSortedPhoneListByExtensionRowChangeEventHandler FindSortedPhoneListByExtensionRowDeleting;
+            public event FindOpenCellPhonesRowChangeEventHandler FindOpenCellPhonesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindSortedPhoneListByExtensionRowChangeEventHandler FindSortedPhoneListByExtensionRowDeleted;
+            public event FindOpenCellPhonesRowChangeEventHandler FindOpenCellPhonesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindSortedPhoneListByExtensionRow(FindSortedPhoneListByExtensionRow row) {
+            public void AddFindOpenCellPhonesRow(FindOpenCellPhonesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionRow AddFindSortedPhoneListByExtensionRow(string FirstName, string LastName, string HomeOffice, string EmployeeType, int Extension, string PhoneNumber, string DirectNumber, string HomeOffice1) {
-                FindSortedPhoneListByExtensionRow rowFindSortedPhoneListByExtensionRow = ((FindSortedPhoneListByExtensionRow)(this.NewRow()));
+            public FindOpenCellPhonesRow AddFindOpenCellPhonesRow(int PhoneID, string PhoneNumber, string FirstName, string LastName) {
+                FindOpenCellPhonesRow rowFindOpenCellPhonesRow = ((FindOpenCellPhonesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        FirstName,
-                        LastName,
-                        HomeOffice,
-                        EmployeeType,
-                        Extension,
+                        PhoneID,
                         PhoneNumber,
-                        DirectNumber,
-                        HomeOffice1};
-                rowFindSortedPhoneListByExtensionRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindSortedPhoneListByExtensionRow);
-                return rowFindSortedPhoneListByExtensionRow;
+                        FirstName,
+                        LastName};
+                rowFindOpenCellPhonesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindOpenCellPhonesRow);
+                return rowFindOpenCellPhonesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FindOpenCellPhonesRow FindByPhoneID(int PhoneID) {
+                return ((FindOpenCellPhonesRow)(this.Rows.Find(new object[] {
+                            PhoneID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindSortedPhoneListByExtensionDataTable cln = ((FindSortedPhoneListByExtensionDataTable)(base.Clone()));
+                FindOpenCellPhonesDataTable cln = ((FindOpenCellPhonesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -456,79 +419,65 @@ namespace PhonesDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindSortedPhoneListByExtensionDataTable();
+                return new FindOpenCellPhonesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnPhoneID = base.Columns["PhoneID"];
+                this.columnPhoneNumber = base.Columns["PhoneNumber"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
-                this.columnHomeOffice = base.Columns["HomeOffice"];
-                this.columnEmployeeType = base.Columns["EmployeeType"];
-                this.columnExtension = base.Columns["Extension"];
-                this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnDirectNumber = base.Columns["DirectNumber"];
-                this.columnHomeOffice1 = base.Columns["HomeOffice1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnPhoneID = new global::System.Data.DataColumn("PhoneID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneID);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneNumber);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
-                this.columnHomeOffice = new global::System.Data.DataColumn("HomeOffice", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHomeOffice);
-                this.columnEmployeeType = new global::System.Data.DataColumn("EmployeeType", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployeeType);
-                this.columnExtension = new global::System.Data.DataColumn("Extension", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExtension);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumber);
-                this.columnDirectNumber = new global::System.Data.DataColumn("DirectNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDirectNumber);
-                this.columnHomeOffice1 = new global::System.Data.DataColumn("HomeOffice1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHomeOffice1);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnPhoneID}, true));
+                this.columnPhoneID.AllowDBNull = false;
+                this.columnPhoneID.Unique = true;
+                this.columnPhoneNumber.AllowDBNull = false;
+                this.columnPhoneNumber.MaxLength = 2147483647;
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
                 this.columnLastName.MaxLength = 2147483647;
-                this.columnHomeOffice.AllowDBNull = false;
-                this.columnHomeOffice.MaxLength = 2147483647;
-                this.columnEmployeeType.AllowDBNull = false;
-                this.columnEmployeeType.MaxLength = 2147483647;
-                this.columnPhoneNumber.MaxLength = 2147483647;
-                this.columnDirectNumber.MaxLength = 2147483647;
-                this.columnHomeOffice1.AllowDBNull = false;
-                this.columnHomeOffice1.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionRow NewFindSortedPhoneListByExtensionRow() {
-                return ((FindSortedPhoneListByExtensionRow)(this.NewRow()));
+            public FindOpenCellPhonesRow NewFindOpenCellPhonesRow() {
+                return ((FindOpenCellPhonesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindSortedPhoneListByExtensionRow(builder);
+                return new FindOpenCellPhonesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindSortedPhoneListByExtensionRow);
+                return typeof(FindOpenCellPhonesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindSortedPhoneListByExtensionRowChanged != null)) {
-                    this.FindSortedPhoneListByExtensionRowChanged(this, new FindSortedPhoneListByExtensionRowChangeEvent(((FindSortedPhoneListByExtensionRow)(e.Row)), e.Action));
+                if ((this.FindOpenCellPhonesRowChanged != null)) {
+                    this.FindOpenCellPhonesRowChanged(this, new FindOpenCellPhonesRowChangeEvent(((FindOpenCellPhonesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -536,8 +485,8 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindSortedPhoneListByExtensionRowChanging != null)) {
-                    this.FindSortedPhoneListByExtensionRowChanging(this, new FindSortedPhoneListByExtensionRowChangeEvent(((FindSortedPhoneListByExtensionRow)(e.Row)), e.Action));
+                if ((this.FindOpenCellPhonesRowChanging != null)) {
+                    this.FindOpenCellPhonesRowChanging(this, new FindOpenCellPhonesRowChangeEvent(((FindOpenCellPhonesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -545,8 +494,8 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindSortedPhoneListByExtensionRowDeleted != null)) {
-                    this.FindSortedPhoneListByExtensionRowDeleted(this, new FindSortedPhoneListByExtensionRowChangeEvent(((FindSortedPhoneListByExtensionRow)(e.Row)), e.Action));
+                if ((this.FindOpenCellPhonesRowDeleted != null)) {
+                    this.FindOpenCellPhonesRowDeleted(this, new FindOpenCellPhonesRowChangeEvent(((FindOpenCellPhonesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -554,14 +503,14 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindSortedPhoneListByExtensionRowDeleting != null)) {
-                    this.FindSortedPhoneListByExtensionRowDeleting(this, new FindSortedPhoneListByExtensionRowChangeEvent(((FindSortedPhoneListByExtensionRow)(e.Row)), e.Action));
+                if ((this.FindOpenCellPhonesRowDeleting != null)) {
+                    this.FindOpenCellPhonesRowDeleting(this, new FindOpenCellPhonesRowChangeEvent(((FindOpenCellPhonesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindSortedPhoneListByExtensionRow(FindSortedPhoneListByExtensionRow row) {
+            public void RemoveFindOpenCellPhonesRow(FindOpenCellPhonesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -570,7 +519,7 @@ namespace PhonesDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindSortedPhoneListByExtensionDataSet ds = new FindSortedPhoneListByExtensionDataSet();
+                FindOpenCellPhonesDataSet ds = new FindOpenCellPhonesDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -588,7 +537,7 @@ namespace PhonesDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindSortedPhoneListByExtensionDataTable";
+                attribute2.FixedValue = "FindOpenCellPhonesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -632,75 +581,25 @@ namespace PhonesDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindSortedPhoneListByExtensionRow : global::System.Data.DataRow {
+        public partial class FindOpenCellPhonesRow : global::System.Data.DataRow {
             
-            private FindSortedPhoneListByExtensionDataTable tableFindSortedPhoneListByExtension;
+            private FindOpenCellPhonesDataTable tableFindOpenCellPhones;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindSortedPhoneListByExtensionRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindOpenCellPhonesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindSortedPhoneListByExtension = ((FindSortedPhoneListByExtensionDataTable)(this.Table));
+                this.tableFindOpenCellPhones = ((FindOpenCellPhonesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FirstName {
+            public int PhoneID {
                 get {
-                    return ((string)(this[this.tableFindSortedPhoneListByExtension.FirstNameColumn]));
+                    return ((int)(this[this.tableFindOpenCellPhones.PhoneIDColumn]));
                 }
                 set {
-                    this[this.tableFindSortedPhoneListByExtension.FirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string LastName {
-                get {
-                    return ((string)(this[this.tableFindSortedPhoneListByExtension.LastNameColumn]));
-                }
-                set {
-                    this[this.tableFindSortedPhoneListByExtension.LastNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string HomeOffice {
-                get {
-                    return ((string)(this[this.tableFindSortedPhoneListByExtension.HomeOfficeColumn]));
-                }
-                set {
-                    this[this.tableFindSortedPhoneListByExtension.HomeOfficeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string EmployeeType {
-                get {
-                    return ((string)(this[this.tableFindSortedPhoneListByExtension.EmployeeTypeColumn]));
-                }
-                set {
-                    this[this.tableFindSortedPhoneListByExtension.EmployeeTypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Extension {
-                get {
-                    try {
-                        return ((int)(this[this.tableFindSortedPhoneListByExtension.ExtensionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Extension\' in table \'FindSortedPhoneListByExtension\' is DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFindSortedPhoneListByExtension.ExtensionColumn] = value;
+                    this[this.tableFindOpenCellPhones.PhoneIDColumn] = value;
                 }
             }
             
@@ -708,81 +607,33 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string PhoneNumber {
                 get {
-                    try {
-                        return ((string)(this[this.tableFindSortedPhoneListByExtension.PhoneNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'FindSortedPhoneListByExtension\' is D" +
-                                "BNull.", e);
-                    }
+                    return ((string)(this[this.tableFindOpenCellPhones.PhoneNumberColumn]));
                 }
                 set {
-                    this[this.tableFindSortedPhoneListByExtension.PhoneNumberColumn] = value;
+                    this[this.tableFindOpenCellPhones.PhoneNumberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DirectNumber {
+            public string FirstName {
                 get {
-                    try {
-                        return ((string)(this[this.tableFindSortedPhoneListByExtension.DirectNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DirectNumber\' in table \'FindSortedPhoneListByExtension\' is " +
-                                "DBNull.", e);
-                    }
+                    return ((string)(this[this.tableFindOpenCellPhones.FirstNameColumn]));
                 }
                 set {
-                    this[this.tableFindSortedPhoneListByExtension.DirectNumberColumn] = value;
+                    this[this.tableFindOpenCellPhones.FirstNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string HomeOffice1 {
+            public string LastName {
                 get {
-                    return ((string)(this[this.tableFindSortedPhoneListByExtension.HomeOffice1Column]));
+                    return ((string)(this[this.tableFindOpenCellPhones.LastNameColumn]));
                 }
                 set {
-                    this[this.tableFindSortedPhoneListByExtension.HomeOffice1Column] = value;
+                    this[this.tableFindOpenCellPhones.LastNameColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExtensionNull() {
-                return this.IsNull(this.tableFindSortedPhoneListByExtension.ExtensionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExtensionNull() {
-                this[this.tableFindSortedPhoneListByExtension.ExtensionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPhoneNumberNull() {
-                return this.IsNull(this.tableFindSortedPhoneListByExtension.PhoneNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPhoneNumberNull() {
-                this[this.tableFindSortedPhoneListByExtension.PhoneNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDirectNumberNull() {
-                return this.IsNull(this.tableFindSortedPhoneListByExtension.DirectNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDirectNumberNull() {
-                this[this.tableFindSortedPhoneListByExtension.DirectNumberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -790,22 +641,22 @@ namespace PhonesDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindSortedPhoneListByExtensionRowChangeEvent : global::System.EventArgs {
+        public class FindOpenCellPhonesRowChangeEvent : global::System.EventArgs {
             
-            private FindSortedPhoneListByExtensionRow eventRow;
+            private FindOpenCellPhonesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionRowChangeEvent(FindSortedPhoneListByExtensionRow row, global::System.Data.DataRowAction action) {
+            public FindOpenCellPhonesRowChangeEvent(FindOpenCellPhonesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedPhoneListByExtensionRow Row {
+            public FindOpenCellPhonesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -821,7 +672,7 @@ namespace PhonesDLL {
         }
     }
 }
-namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
+namespace PhonesDLL.FindOpenCellPhonesDataSetTableAdapters {
     
     
     /// <summary>
@@ -833,7 +684,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindSortedPhoneListByExtensionTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindOpenCellPhonesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -847,7 +698,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindSortedPhoneListByExtensionTableAdapter() {
+        public FindOpenCellPhonesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -944,15 +795,11 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindSortedPhoneListByExtension";
+            tableMapping.DataSetTable = "FindOpenCellPhones";
+            tableMapping.ColumnMappings.Add("PhoneID", "PhoneID");
+            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
-            tableMapping.ColumnMappings.Add("EmployeeType", "EmployeeType");
-            tableMapping.ColumnMappings.Add("Extension", "Extension");
-            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("DirectNumber", "DirectNumber");
-            tableMapping.ColumnMappings.Add("HomeOffice1", "HomeOffice1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -969,7 +816,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindSortedPhoneListByExtension";
+            this._commandCollection[0].CommandText = "dbo.FindOpenCellPhones";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -978,7 +825,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindSortedPhoneListByExtensionDataSet.FindSortedPhoneListByExtensionDataTable dataTable) {
+        public virtual int Fill(FindOpenCellPhonesDataSet.FindOpenCellPhonesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -991,9 +838,9 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindSortedPhoneListByExtensionDataSet.FindSortedPhoneListByExtensionDataTable GetData() {
+        public virtual FindOpenCellPhonesDataSet.FindOpenCellPhonesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FindSortedPhoneListByExtensionDataSet.FindSortedPhoneListByExtensionDataTable dataTable = new FindSortedPhoneListByExtensionDataSet.FindSortedPhoneListByExtensionDataTable();
+            FindOpenCellPhonesDataSet.FindOpenCellPhonesDataTable dataTable = new FindOpenCellPhonesDataSet.FindOpenCellPhonesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1067,7 +914,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(FindSortedPhoneListByExtensionDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindOpenCellPhonesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1077,7 +924,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(FindSortedPhoneListByExtensionDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindOpenCellPhonesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1087,7 +934,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(FindSortedPhoneListByExtensionDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindOpenCellPhonesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1121,7 +968,7 @@ namespace PhonesDLL.FindSortedPhoneListByExtensionDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(FindSortedPhoneListByExtensionDataSet dataSet) {
+        public virtual int UpdateAll(FindOpenCellPhonesDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
