@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateEmployeePhoneEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdatePhoneEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdatePhoneEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePhoneExtensionEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +292,17 @@
     </None>
     <None Include="UpdateEmployeePhoneEntry.xss">
       <DependentUpon>UpdateEmployeePhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePhoneEntry.xsc">
+      <DependentUpon>UpdatePhoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePhoneEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdatePhoneEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdatePhoneEntry.xss">
+      <DependentUpon>UpdatePhoneEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdatePhoneExtensionEntry.xsc">
       <DependentUpon>UpdatePhoneExtensionEntry.xsd</DependentUpon>

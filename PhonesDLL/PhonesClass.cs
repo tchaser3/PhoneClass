@@ -58,6 +58,24 @@ namespace PhonesDLL
         FindCellPhoneHistoryByPhoneNumberDataSet aFindCellPhoneHistoryByPhoneNumberDataSet;
         FindCellPhoneHistoryByPhoneNumberDataSetTableAdapters.FindCellPhoneHistoryByPhoneNumberTableAdapter aFindCellPhoneHistoryByPhoneNumberTableAdapter;
 
+        UpdatePhoneEntryTableAdapters.QueriesTableAdapter aUpdatePhoneTableAdapter;
+
+        public bool UpdatePhone(int intTransactionID, int intPhoneExt, int intWarehouseID, int intEmployeeID, string strDirectNumber)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdatePhoneTableAdapter = new UpdatePhoneEntryTableAdapters.QueriesTableAdapter();
+                aUpdatePhoneTableAdapter.UpdatePhone(intTransactionID, intPhoneExt, intWarehouseID, intEmployeeID, strDirectNumber);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phones Class // Update Phone " + Ex.Message);
+            }
+
+            return blnFatalError;
+        }
         public FindCellPhoneHistoryByPhoneNumberDataSet FindCellPhoneHistoryByPhoneNumber(string strPhoneNumber)
         {
             try
