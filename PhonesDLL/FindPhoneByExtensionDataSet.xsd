@@ -29,6 +29,8 @@
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
               <Mapping SourceColumn="MACAddress" DataSetColumn="MACAddress" />
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,7 +42,7 @@
   <xs:element name="FindPhoneByExtensionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindPhoneByExtensionDataSet" msprop:Generator_UserDSName="FindPhoneByExtensionDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindPhoneByExtension" msprop:Generator_TableClassName="FindPhoneByExtensionDataTable" msprop:Generator_TableVarName="tableFindPhoneByExtension" msprop:Generator_TablePropName="FindPhoneByExtension" msprop:Generator_RowDeletingName="FindPhoneByExtensionRowDeleting" msprop:Generator_RowChangingName="FindPhoneByExtensionRowChanging" msprop:Generator_RowEvHandlerName="FindPhoneByExtensionRowChangeEventHandler" msprop:Generator_RowDeletedName="FindPhoneByExtensionRowDeleted" msprop:Generator_UserTableName="FindPhoneByExtension" msprop:Generator_RowChangedName="FindPhoneByExtensionRowChanged" msprop:Generator_RowEvArgName="FindPhoneByExtensionRowChangeEvent" msprop:Generator_RowClassName="FindPhoneByExtensionRow">
+        <xs:element name="FindPhoneByExtension" msprop:Generator_TableClassName="FindPhoneByExtensionDataTable" msprop:Generator_TableVarName="tableFindPhoneByExtension" msprop:Generator_RowChangedName="FindPhoneByExtensionRowChanged" msprop:Generator_TablePropName="FindPhoneByExtension" msprop:Generator_RowDeletingName="FindPhoneByExtensionRowDeleting" msprop:Generator_RowChangingName="FindPhoneByExtensionRowChanging" msprop:Generator_RowEvHandlerName="FindPhoneByExtensionRowChangeEventHandler" msprop:Generator_RowDeletedName="FindPhoneByExtensionRowDeleted" msprop:Generator_RowClassName="FindPhoneByExtensionRow" msprop:Generator_UserTableName="FindPhoneByExtension" msprop:Generator_RowEvArgName="FindPhoneByExtensionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
@@ -74,6 +76,14 @@
               </xs:element>
               <xs:element name="WarehouseID" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" />
               <xs:element name="MACAddress" msprop:Generator_ColumnVarNameInTable="columnMACAddress" msprop:Generator_ColumnPropNameInRow="MACAddress" msprop:Generator_ColumnPropNameInTable="MACAddressColumn" msprop:Generator_UserColumnName="MACAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
+              <xs:element name="FullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />

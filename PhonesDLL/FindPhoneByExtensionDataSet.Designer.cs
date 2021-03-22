@@ -293,6 +293,10 @@ namespace PhonesDLL {
             
             private global::System.Data.DataColumn columnMACAddress;
             
+            private global::System.Data.DataColumn columnEmployeeID;
+            
+            private global::System.Data.DataColumn columnFullName;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindPhoneByExtensionDataTable() {
@@ -384,6 +388,22 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeIDColumn {
+                get {
+                    return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FullNameColumn {
+                get {
+                    return this.columnFullName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +439,7 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindPhoneByExtensionRow AddFindPhoneByExtensionRow(int TransactionID, string DirectNumber, string PhoneNumber, string FirstName, string LastName, int WarehouseID, string MACAddress) {
+            public FindPhoneByExtensionRow AddFindPhoneByExtensionRow(int TransactionID, string DirectNumber, string PhoneNumber, string FirstName, string LastName, int WarehouseID, string MACAddress, int EmployeeID, string FullName) {
                 FindPhoneByExtensionRow rowFindPhoneByExtensionRow = ((FindPhoneByExtensionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionID,
@@ -428,7 +448,9 @@ namespace PhonesDLL {
                         FirstName,
                         LastName,
                         WarehouseID,
-                        MACAddress};
+                        MACAddress,
+                        EmployeeID,
+                        FullName};
                 rowFindPhoneByExtensionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindPhoneByExtensionRow);
                 return rowFindPhoneByExtensionRow;
@@ -465,6 +487,8 @@ namespace PhonesDLL {
                 this.columnLastName = base.Columns["LastName"];
                 this.columnWarehouseID = base.Columns["WarehouseID"];
                 this.columnMACAddress = base.Columns["MACAddress"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
+                this.columnFullName = base.Columns["FullName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,6 +508,10 @@ namespace PhonesDLL {
                 base.Columns.Add(this.columnWarehouseID);
                 this.columnMACAddress = new global::System.Data.DataColumn("MACAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMACAddress);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
+                this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFullName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AllowDBNull = false;
@@ -497,6 +525,9 @@ namespace PhonesDLL {
                 this.columnLastName.MaxLength = 2147483647;
                 this.columnWarehouseID.AllowDBNull = false;
                 this.columnMACAddress.MaxLength = 2147483647;
+                this.columnEmployeeID.AllowDBNull = false;
+                this.columnFullName.ReadOnly = true;
+                this.columnFullName.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -726,6 +757,33 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int EmployeeID {
+                get {
+                    return ((int)(this[this.tableFindPhoneByExtension.EmployeeIDColumn]));
+                }
+                set {
+                    this[this.tableFindPhoneByExtension.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FullName {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindPhoneByExtension.FullNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FullName\' in table \'FindPhoneByExtension\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindPhoneByExtension.FullNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPhoneNumberNull() {
                 return this.IsNull(this.tableFindPhoneByExtension.PhoneNumberColumn);
             }
@@ -746,6 +804,18 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetMACAddressNull() {
                 this[this.tableFindPhoneByExtension.MACAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFullNameNull() {
+                return this.IsNull(this.tableFindPhoneByExtension.FullNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFullNameNull() {
+                this[this.tableFindPhoneByExtension.FullNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -915,6 +985,8 @@ namespace PhonesDLL.FindPhoneByExtensionDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
             tableMapping.ColumnMappings.Add("MACAddress", "MACAddress");
+            tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
+            tableMapping.ColumnMappings.Add("FullName", "FullName");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
