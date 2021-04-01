@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindCellPhoneHistoryByPhoneNumberDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindCurrentCellPhoneAssignmentsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCurrentCellPhoneAssignmentsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindOpenCellPhonesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +172,17 @@
     </None>
     <None Include="FindCellPhoneHistoryByPhoneNumberDataSet.xss">
       <DependentUpon>FindCellPhoneHistoryByPhoneNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentCellPhoneAssignmentsDataSet.xsc">
+      <DependentUpon>FindCurrentCellPhoneAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentCellPhoneAssignmentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCurrentCellPhoneAssignmentsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCurrentCellPhoneAssignmentsDataSet.xss">
+      <DependentUpon>FindCurrentCellPhoneAssignmentsDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindOpenCellPhonesDataSet.xsc">
       <DependentUpon>FindOpenCellPhonesDataSet.xsd</DependentUpon>

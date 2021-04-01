@@ -60,6 +60,24 @@ namespace PhonesDLL
 
         UpdatePhoneEntryTableAdapters.QueriesTableAdapter aUpdatePhoneTableAdapter;
 
+        FindCurrentCellPhoneAssignmentsDataSet aFindCurrentCellPhoneAssignmentsDataSet;
+        FindCurrentCellPhoneAssignmentsDataSetTableAdapters.FindCurrentCellPhoneAssignmentsTableAdapter aFindCurrentCellPhoneAssignmentsTableAdapter;
+
+        public FindCurrentCellPhoneAssignmentsDataSet FindCurrentCellPhoneAssignments()
+        {
+            try
+            {
+                aFindCurrentCellPhoneAssignmentsDataSet = new FindCurrentCellPhoneAssignmentsDataSet();
+                aFindCurrentCellPhoneAssignmentsTableAdapter = new FindCurrentCellPhoneAssignmentsDataSetTableAdapters.FindCurrentCellPhoneAssignmentsTableAdapter();
+                aFindCurrentCellPhoneAssignmentsTableAdapter.Fill(aFindCurrentCellPhoneAssignmentsDataSet.FindCurrentCellPhoneAssignments);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phones Class // Find Current Cell Phone Assignment " + Ex.Message);
+            }
+
+            return aFindCurrentCellPhoneAssignmentsDataSet;
+        }
         public bool UpdatePhone(int intTransactionID, int intPhoneExt, int intWarehouseID, int intEmployeeID, string strDirectNumber)
         {
             bool blnFatalError = false;
