@@ -63,6 +63,24 @@ namespace PhonesDLL
         FindCurrentCellPhoneAssignmentsDataSet aFindCurrentCellPhoneAssignmentsDataSet;
         FindCurrentCellPhoneAssignmentsDataSetTableAdapters.FindCurrentCellPhoneAssignmentsTableAdapter aFindCurrentCellPhoneAssignmentsTableAdapter;
 
+        FindSortedPhoneListOnlyDataSet aFindSortedPhoneListOnlyDataSet;
+        FindSortedPhoneListOnlyDataSetTableAdapters.FindSortedPhoneListOnlyTableAdapter aFindSortedPhoneListOnlyTableAdapter;
+
+        public FindSortedPhoneListOnlyDataSet FindSortedPhoneListOnly()
+        {
+            try
+            {
+                aFindSortedPhoneListOnlyDataSet = new FindSortedPhoneListOnlyDataSet();
+                aFindSortedPhoneListOnlyTableAdapter = new FindSortedPhoneListOnlyDataSetTableAdapters.FindSortedPhoneListOnlyTableAdapter();
+                aFindSortedPhoneListOnlyTableAdapter.Fill(aFindSortedPhoneListOnlyDataSet.FindSortedPhoneListOnly);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phones Class // Find Sorted Phone List Only " + Ex.Message);
+            }
+
+            return aFindSortedPhoneListOnlyDataSet;
+        }
         public FindCurrentCellPhoneAssignmentsDataSet FindCurrentCellPhoneAssignments()
         {
             try

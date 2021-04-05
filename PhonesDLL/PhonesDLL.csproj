@@ -95,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedPhoneListByExtensionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindSortedPhoneListOnlyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedPhoneListOnlyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertCellPhoneEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -249,6 +254,17 @@
     </None>
     <None Include="FindSortedPhoneListByExtensionDataSet.xss">
       <DependentUpon>FindSortedPhoneListByExtensionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedPhoneListOnlyDataSet.xsc">
+      <DependentUpon>FindSortedPhoneListOnlyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedPhoneListOnlyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedPhoneListOnlyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedPhoneListOnlyDataSet.xss">
+      <DependentUpon>FindSortedPhoneListOnlyDataSet.xsd</DependentUpon>
     </None>
     <None Include="InsertCellPhoneEntry.xsc">
       <DependentUpon>InsertCellPhoneEntry.xsd</DependentUpon>
