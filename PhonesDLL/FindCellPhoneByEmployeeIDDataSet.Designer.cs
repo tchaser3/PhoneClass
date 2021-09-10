@@ -20,17 +20,17 @@ namespace PhonesDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindCellPhoneByLastFourDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindCellPhoneByEmployeeIDDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindCellPhoneByLastFourDataSet : global::System.Data.DataSet {
+    public partial class FindCellPhoneByEmployeeIDDataSet : global::System.Data.DataSet {
         
-        private FindCellPhoneByLastFourDataTable tableFindCellPhoneByLastFour;
+        private FindCellPhoneByEmployeeIDDataTable tableFindCellPhoneByEmployeeID;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindCellPhoneByLastFourDataSet() {
+        public FindCellPhoneByEmployeeIDDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PhonesDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected FindCellPhoneByLastFourDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindCellPhoneByEmployeeIDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PhonesDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindCellPhoneByLastFour"] != null)) {
-                    base.Tables.Add(new FindCellPhoneByLastFourDataTable(ds.Tables["FindCellPhoneByLastFour"]));
+                if ((ds.Tables["FindCellPhoneByEmployeeID"] != null)) {
+                    base.Tables.Add(new FindCellPhoneByEmployeeIDDataTable(ds.Tables["FindCellPhoneByEmployeeID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PhonesDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindCellPhoneByLastFourDataTable FindCellPhoneByLastFour {
+        public FindCellPhoneByEmployeeIDDataTable FindCellPhoneByEmployeeID {
             get {
-                return this.tableFindCellPhoneByLastFour;
+                return this.tableFindCellPhoneByEmployeeID;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindCellPhoneByLastFourDataSet cln = ((FindCellPhoneByLastFourDataSet)(base.Clone()));
+            FindCellPhoneByEmployeeIDDataSet cln = ((FindCellPhoneByEmployeeIDDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PhonesDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindCellPhoneByLastFour"] != null)) {
-                    base.Tables.Add(new FindCellPhoneByLastFourDataTable(ds.Tables["FindCellPhoneByLastFour"]));
+                if ((ds.Tables["FindCellPhoneByEmployeeID"] != null)) {
+                    base.Tables.Add(new FindCellPhoneByEmployeeIDDataTable(ds.Tables["FindCellPhoneByEmployeeID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindCellPhoneByLastFour = ((FindCellPhoneByLastFourDataTable)(base.Tables["FindCellPhoneByLastFour"]));
+            this.tableFindCellPhoneByEmployeeID = ((FindCellPhoneByEmployeeIDDataTable)(base.Tables["FindCellPhoneByEmployeeID"]));
             if ((initTable == true)) {
-                if ((this.tableFindCellPhoneByLastFour != null)) {
-                    this.tableFindCellPhoneByLastFour.InitVars();
+                if ((this.tableFindCellPhoneByEmployeeID != null)) {
+                    this.tableFindCellPhoneByEmployeeID.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindCellPhoneByLastFourDataSet";
+            this.DataSetName = "FindCellPhoneByEmployeeIDDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindCellPhoneByLastFourDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindCellPhoneByEmployeeIDDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindCellPhoneByLastFour = new FindCellPhoneByLastFourDataTable();
-            base.Tables.Add(this.tableFindCellPhoneByLastFour);
+            this.tableFindCellPhoneByEmployeeID = new FindCellPhoneByEmployeeIDDataTable();
+            base.Tables.Add(this.tableFindCellPhoneByEmployeeID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindCellPhoneByLastFour() {
+        private bool ShouldSerializeFindCellPhoneByEmployeeID() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PhonesDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindCellPhoneByLastFourDataSet ds = new FindCellPhoneByLastFourDataSet();
+            FindCellPhoneByEmployeeIDDataSet ds = new FindCellPhoneByEmployeeIDDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,31 +270,25 @@ namespace PhonesDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindCellPhoneByLastFourRowChangeEventHandler(object sender, FindCellPhoneByLastFourRowChangeEvent e);
+        public delegate void FindCellPhoneByEmployeeIDRowChangeEventHandler(object sender, FindCellPhoneByEmployeeIDRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindCellPhoneByLastFourDataTable : global::System.Data.TypedTableBase<FindCellPhoneByLastFourRow> {
-            
-            private global::System.Data.DataColumn columnPhoneID;
-            
-            private global::System.Data.DataColumn columnEmployeeID;
-            
-            private global::System.Data.DataColumn columnFirstName;
-            
-            private global::System.Data.DataColumn columnLastName;
+        public partial class FindCellPhoneByEmployeeIDDataTable : global::System.Data.TypedTableBase<FindCellPhoneByEmployeeIDRow> {
             
             private global::System.Data.DataColumn columnPhoneNumber;
             
-            private global::System.Data.DataColumn columnEquipmentNotes;
+            private global::System.Data.DataColumn columnWarehouseID;
+            
+            private global::System.Data.DataColumn columnWarehouse;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourDataTable() {
-                this.TableName = "FindCellPhoneByLastFour";
+            public FindCellPhoneByEmployeeIDDataTable() {
+                this.TableName = "FindCellPhoneByEmployeeID";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +296,7 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindCellPhoneByLastFourDataTable(global::System.Data.DataTable table) {
+            internal FindCellPhoneByEmployeeIDDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,41 +313,9 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindCellPhoneByLastFourDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindCellPhoneByEmployeeIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PhoneIDColumn {
-                get {
-                    return this.columnPhoneID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EmployeeIDColumn {
-                get {
-                    return this.columnEmployeeID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
-                get {
-                    return this.columnFirstName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
-                get {
-                    return this.columnLastName;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -366,9 +328,17 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EquipmentNotesColumn {
+            public global::System.Data.DataColumn WarehouseIDColumn {
                 get {
-                    return this.columnEquipmentNotes;
+                    return this.columnWarehouseID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn WarehouseColumn {
+                get {
+                    return this.columnWarehouse;
                 }
             }
             
@@ -383,57 +353,47 @@ namespace PhonesDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourRow this[int index] {
+            public FindCellPhoneByEmployeeIDRow this[int index] {
                 get {
-                    return ((FindCellPhoneByLastFourRow)(this.Rows[index]));
+                    return ((FindCellPhoneByEmployeeIDRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindCellPhoneByLastFourRowChangeEventHandler FindCellPhoneByLastFourRowChanging;
+            public event FindCellPhoneByEmployeeIDRowChangeEventHandler FindCellPhoneByEmployeeIDRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindCellPhoneByLastFourRowChangeEventHandler FindCellPhoneByLastFourRowChanged;
+            public event FindCellPhoneByEmployeeIDRowChangeEventHandler FindCellPhoneByEmployeeIDRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindCellPhoneByLastFourRowChangeEventHandler FindCellPhoneByLastFourRowDeleting;
+            public event FindCellPhoneByEmployeeIDRowChangeEventHandler FindCellPhoneByEmployeeIDRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindCellPhoneByLastFourRowChangeEventHandler FindCellPhoneByLastFourRowDeleted;
+            public event FindCellPhoneByEmployeeIDRowChangeEventHandler FindCellPhoneByEmployeeIDRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindCellPhoneByLastFourRow(FindCellPhoneByLastFourRow row) {
+            public void AddFindCellPhoneByEmployeeIDRow(FindCellPhoneByEmployeeIDRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourRow AddFindCellPhoneByLastFourRow(int PhoneID, int EmployeeID, string FirstName, string LastName, string PhoneNumber, string EquipmentNotes) {
-                FindCellPhoneByLastFourRow rowFindCellPhoneByLastFourRow = ((FindCellPhoneByLastFourRow)(this.NewRow()));
+            public FindCellPhoneByEmployeeIDRow AddFindCellPhoneByEmployeeIDRow(string PhoneNumber, int WarehouseID, string Warehouse) {
+                FindCellPhoneByEmployeeIDRow rowFindCellPhoneByEmployeeIDRow = ((FindCellPhoneByEmployeeIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        PhoneID,
-                        EmployeeID,
-                        FirstName,
-                        LastName,
                         PhoneNumber,
-                        EquipmentNotes};
-                rowFindCellPhoneByLastFourRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindCellPhoneByLastFourRow);
-                return rowFindCellPhoneByLastFourRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourRow FindByPhoneID(int PhoneID) {
-                return ((FindCellPhoneByLastFourRow)(this.Rows.Find(new object[] {
-                            PhoneID})));
+                        WarehouseID,
+                        Warehouse};
+                rowFindCellPhoneByEmployeeIDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindCellPhoneByEmployeeIDRow);
+                return rowFindCellPhoneByEmployeeIDRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindCellPhoneByLastFourDataTable cln = ((FindCellPhoneByLastFourDataTable)(base.Clone()));
+                FindCellPhoneByEmployeeIDDataTable cln = ((FindCellPhoneByEmployeeIDDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,74 +401,57 @@ namespace PhonesDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindCellPhoneByLastFourDataTable();
+                return new FindCellPhoneByEmployeeIDDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnPhoneID = base.Columns["PhoneID"];
-                this.columnEmployeeID = base.Columns["EmployeeID"];
-                this.columnFirstName = base.Columns["FirstName"];
-                this.columnLastName = base.Columns["LastName"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnEquipmentNotes = base.Columns["EquipmentNotes"];
+                this.columnWarehouseID = base.Columns["WarehouseID"];
+                this.columnWarehouse = base.Columns["Warehouse"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnPhoneID = new global::System.Data.DataColumn("PhoneID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneID);
-                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployeeID);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
-                this.columnEquipmentNotes = new global::System.Data.DataColumn("EquipmentNotes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEquipmentNotes);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnPhoneID}, true));
-                this.columnPhoneID.AllowDBNull = false;
-                this.columnPhoneID.Unique = true;
-                this.columnEmployeeID.AllowDBNull = false;
-                this.columnFirstName.AllowDBNull = false;
-                this.columnFirstName.MaxLength = 2147483647;
-                this.columnLastName.AllowDBNull = false;
-                this.columnLastName.MaxLength = 2147483647;
+                this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWarehouseID);
+                this.columnWarehouse = new global::System.Data.DataColumn("Warehouse", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWarehouse);
                 this.columnPhoneNumber.AllowDBNull = false;
                 this.columnPhoneNumber.MaxLength = 2147483647;
-                this.columnEquipmentNotes.AllowDBNull = false;
-                this.columnEquipmentNotes.MaxLength = 2147483647;
+                this.columnWarehouseID.AllowDBNull = false;
+                this.columnWarehouse.AllowDBNull = false;
+                this.columnWarehouse.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourRow NewFindCellPhoneByLastFourRow() {
-                return ((FindCellPhoneByLastFourRow)(this.NewRow()));
+            public FindCellPhoneByEmployeeIDRow NewFindCellPhoneByEmployeeIDRow() {
+                return ((FindCellPhoneByEmployeeIDRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindCellPhoneByLastFourRow(builder);
+                return new FindCellPhoneByEmployeeIDRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindCellPhoneByLastFourRow);
+                return typeof(FindCellPhoneByEmployeeIDRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindCellPhoneByLastFourRowChanged != null)) {
-                    this.FindCellPhoneByLastFourRowChanged(this, new FindCellPhoneByLastFourRowChangeEvent(((FindCellPhoneByLastFourRow)(e.Row)), e.Action));
+                if ((this.FindCellPhoneByEmployeeIDRowChanged != null)) {
+                    this.FindCellPhoneByEmployeeIDRowChanged(this, new FindCellPhoneByEmployeeIDRowChangeEvent(((FindCellPhoneByEmployeeIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -516,8 +459,8 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindCellPhoneByLastFourRowChanging != null)) {
-                    this.FindCellPhoneByLastFourRowChanging(this, new FindCellPhoneByLastFourRowChangeEvent(((FindCellPhoneByLastFourRow)(e.Row)), e.Action));
+                if ((this.FindCellPhoneByEmployeeIDRowChanging != null)) {
+                    this.FindCellPhoneByEmployeeIDRowChanging(this, new FindCellPhoneByEmployeeIDRowChangeEvent(((FindCellPhoneByEmployeeIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -525,8 +468,8 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindCellPhoneByLastFourRowDeleted != null)) {
-                    this.FindCellPhoneByLastFourRowDeleted(this, new FindCellPhoneByLastFourRowChangeEvent(((FindCellPhoneByLastFourRow)(e.Row)), e.Action));
+                if ((this.FindCellPhoneByEmployeeIDRowDeleted != null)) {
+                    this.FindCellPhoneByEmployeeIDRowDeleted(this, new FindCellPhoneByEmployeeIDRowChangeEvent(((FindCellPhoneByEmployeeIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -534,14 +477,14 @@ namespace PhonesDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindCellPhoneByLastFourRowDeleting != null)) {
-                    this.FindCellPhoneByLastFourRowDeleting(this, new FindCellPhoneByLastFourRowChangeEvent(((FindCellPhoneByLastFourRow)(e.Row)), e.Action));
+                if ((this.FindCellPhoneByEmployeeIDRowDeleting != null)) {
+                    this.FindCellPhoneByEmployeeIDRowDeleting(this, new FindCellPhoneByEmployeeIDRowChangeEvent(((FindCellPhoneByEmployeeIDRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindCellPhoneByLastFourRow(FindCellPhoneByLastFourRow row) {
+            public void RemoveFindCellPhoneByEmployeeIDRow(FindCellPhoneByEmployeeIDRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -550,7 +493,7 @@ namespace PhonesDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindCellPhoneByLastFourDataSet ds = new FindCellPhoneByLastFourDataSet();
+                FindCellPhoneByEmployeeIDDataSet ds = new FindCellPhoneByEmployeeIDDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -568,7 +511,7 @@ namespace PhonesDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindCellPhoneByLastFourDataTable";
+                attribute2.FixedValue = "FindCellPhoneByEmployeeIDDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -612,80 +555,47 @@ namespace PhonesDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindCellPhoneByLastFourRow : global::System.Data.DataRow {
+        public partial class FindCellPhoneByEmployeeIDRow : global::System.Data.DataRow {
             
-            private FindCellPhoneByLastFourDataTable tableFindCellPhoneByLastFour;
+            private FindCellPhoneByEmployeeIDDataTable tableFindCellPhoneByEmployeeID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindCellPhoneByLastFourRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindCellPhoneByEmployeeIDRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindCellPhoneByLastFour = ((FindCellPhoneByLastFourDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int PhoneID {
-                get {
-                    return ((int)(this[this.tableFindCellPhoneByLastFour.PhoneIDColumn]));
-                }
-                set {
-                    this[this.tableFindCellPhoneByLastFour.PhoneIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int EmployeeID {
-                get {
-                    return ((int)(this[this.tableFindCellPhoneByLastFour.EmployeeIDColumn]));
-                }
-                set {
-                    this[this.tableFindCellPhoneByLastFour.EmployeeIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FirstName {
-                get {
-                    return ((string)(this[this.tableFindCellPhoneByLastFour.FirstNameColumn]));
-                }
-                set {
-                    this[this.tableFindCellPhoneByLastFour.FirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string LastName {
-                get {
-                    return ((string)(this[this.tableFindCellPhoneByLastFour.LastNameColumn]));
-                }
-                set {
-                    this[this.tableFindCellPhoneByLastFour.LastNameColumn] = value;
-                }
+                this.tableFindCellPhoneByEmployeeID = ((FindCellPhoneByEmployeeIDDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string PhoneNumber {
                 get {
-                    return ((string)(this[this.tableFindCellPhoneByLastFour.PhoneNumberColumn]));
+                    return ((string)(this[this.tableFindCellPhoneByEmployeeID.PhoneNumberColumn]));
                 }
                 set {
-                    this[this.tableFindCellPhoneByLastFour.PhoneNumberColumn] = value;
+                    this[this.tableFindCellPhoneByEmployeeID.PhoneNumberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string EquipmentNotes {
+            public int WarehouseID {
                 get {
-                    return ((string)(this[this.tableFindCellPhoneByLastFour.EquipmentNotesColumn]));
+                    return ((int)(this[this.tableFindCellPhoneByEmployeeID.WarehouseIDColumn]));
                 }
                 set {
-                    this[this.tableFindCellPhoneByLastFour.EquipmentNotesColumn] = value;
+                    this[this.tableFindCellPhoneByEmployeeID.WarehouseIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Warehouse {
+                get {
+                    return ((string)(this[this.tableFindCellPhoneByEmployeeID.WarehouseColumn]));
+                }
+                set {
+                    this[this.tableFindCellPhoneByEmployeeID.WarehouseColumn] = value;
                 }
             }
         }
@@ -694,22 +604,22 @@ namespace PhonesDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindCellPhoneByLastFourRowChangeEvent : global::System.EventArgs {
+        public class FindCellPhoneByEmployeeIDRowChangeEvent : global::System.EventArgs {
             
-            private FindCellPhoneByLastFourRow eventRow;
+            private FindCellPhoneByEmployeeIDRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourRowChangeEvent(FindCellPhoneByLastFourRow row, global::System.Data.DataRowAction action) {
+            public FindCellPhoneByEmployeeIDRowChangeEvent(FindCellPhoneByEmployeeIDRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCellPhoneByLastFourRow Row {
+            public FindCellPhoneByEmployeeIDRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -725,7 +635,7 @@ namespace PhonesDLL {
         }
     }
 }
-namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
+namespace PhonesDLL.FindCellPhoneByEmployeeIDDataSetTableAdapters {
     
     
     /// <summary>
@@ -737,7 +647,7 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindCellPhoneByLastFourTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindCellPhoneByEmployeeIDTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -751,7 +661,7 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindCellPhoneByLastFourTableAdapter() {
+        public FindCellPhoneByEmployeeIDTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -848,13 +758,10 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindCellPhoneByLastFour";
-            tableMapping.ColumnMappings.Add("PhoneID", "PhoneID");
-            tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
-            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.DataSetTable = "FindCellPhoneByEmployeeID";
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("EquipmentNotes", "EquipmentNotes");
+            tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
+            tableMapping.ColumnMappings.Add("Warehouse", "Warehouse");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -871,23 +778,23 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindCellPhoneByLastFour";
+            this._commandCollection[0].CommandText = "dbo.FindCellPhoneByEmployeeID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindCellPhoneByLastFourDataSet.FindCellPhoneByLastFourDataTable dataTable, string PhoneNumber) {
+        public virtual int Fill(FindCellPhoneByEmployeeIDDataSet.FindCellPhoneByEmployeeIDDataTable dataTable, global::System.Nullable<int> EmployeeID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((PhoneNumber == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((EmployeeID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(EmployeeID.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(PhoneNumber));
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -900,15 +807,15 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindCellPhoneByLastFourDataSet.FindCellPhoneByLastFourDataTable GetData(string PhoneNumber) {
+        public virtual FindCellPhoneByEmployeeIDDataSet.FindCellPhoneByEmployeeIDDataTable GetData(global::System.Nullable<int> EmployeeID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((PhoneNumber == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((EmployeeID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(EmployeeID.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(PhoneNumber));
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            FindCellPhoneByLastFourDataSet.FindCellPhoneByLastFourDataTable dataTable = new FindCellPhoneByLastFourDataSet.FindCellPhoneByLastFourDataTable();
+            FindCellPhoneByEmployeeIDDataSet.FindCellPhoneByEmployeeIDDataTable dataTable = new FindCellPhoneByEmployeeIDDataSet.FindCellPhoneByEmployeeIDDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -982,7 +889,7 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(FindCellPhoneByLastFourDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindCellPhoneByEmployeeIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -992,7 +899,7 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(FindCellPhoneByLastFourDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindCellPhoneByEmployeeIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1002,7 +909,7 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(FindCellPhoneByLastFourDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindCellPhoneByEmployeeIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1036,7 +943,7 @@ namespace PhonesDLL.FindCellPhoneByLastFourDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(FindCellPhoneByLastFourDataSet dataSet) {
+        public virtual int UpdateAll(FindCellPhoneByEmployeeIDDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

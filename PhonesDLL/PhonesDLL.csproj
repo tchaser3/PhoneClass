@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindCellPhoneByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCellPhoneByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindCellPhoneByLastFourDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +160,17 @@
     </None>
     <None Include="CellPhoneListDataSet.xss">
       <DependentUpon>CellPhoneListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCellPhoneByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindCellPhoneByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCellPhoneByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCellPhoneByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCellPhoneByEmployeeIDDataSet.xss">
+      <DependentUpon>FindCellPhoneByEmployeeIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindCellPhoneByLastFourDataSet.xsc">
       <DependentUpon>FindCellPhoneByLastFourDataSet.xsd</DependentUpon>

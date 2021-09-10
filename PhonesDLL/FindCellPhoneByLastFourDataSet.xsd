@@ -23,6 +23,7 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="PhoneID" DataSetColumn="PhoneID" />
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
@@ -42,6 +43,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PhoneID" msprop:Generator_ColumnVarNameInTable="columnPhoneID" msprop:Generator_ColumnPropNameInRow="PhoneID" msprop:Generator_ColumnPropNameInTable="PhoneIDColumn" msprop:Generator_UserColumnName="PhoneID" type="xs:int" />
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
