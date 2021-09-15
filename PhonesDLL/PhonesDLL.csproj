@@ -90,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindPhoneExtensionsByLocationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindPhoneForImportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPhoneForImportDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedExtensionsByLastNameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -248,6 +253,17 @@
     </None>
     <None Include="FindPhoneExtensionsByLocationDataSet.xss">
       <DependentUpon>FindPhoneExtensionsByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneForImportDataSet.xsc">
+      <DependentUpon>FindPhoneForImportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPhoneForImportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPhoneForImportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPhoneForImportDataSet.xss">
+      <DependentUpon>FindPhoneForImportDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindSortedExtensionsByLastNameDataSet.xsc">
       <DependentUpon>FindSortedExtensionsByLastNameDataSet.xsd</DependentUpon>

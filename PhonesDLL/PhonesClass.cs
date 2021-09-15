@@ -68,7 +68,26 @@ namespace PhonesDLL
 
         FindCellPhoneByEmployeeIDDataSet aFindCellPhoneByEmployeeIDDataSet;
         FindCellPhoneByEmployeeIDDataSetTableAdapters.FindCellPhoneByEmployeeIDTableAdapter aFindCellPhoneByEmployeeIDTableAdapter;
-        
+
+        FindPhoneForImportDataSet aFindPhoneForImportDataSet;
+        FindPhoneForImportDataSetTableAdapters.FindPhoneForImportTableAdapter aFindPhoneForImportTableAdapter;
+
+        public FindPhoneForImportDataSet FindPhoneForImport(int intExtension)
+        {
+            try
+            {
+                aFindPhoneForImportDataSet = new FindPhoneForImportDataSet();
+                aFindPhoneForImportTableAdapter = new FindPhoneForImportDataSetTableAdapters.FindPhoneForImportTableAdapter();
+                aFindPhoneForImportTableAdapter.Fill(aFindPhoneForImportDataSet.FindPhoneForImport, intExtension);
+
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Phone Class // Find Phone For Import " + Ex.Message);
+            }
+
+            return aFindPhoneForImportDataSet;
+        }
         public FindCellPhoneByEmployeeIDDataSet FindCellPhoneByEmployeeID(int intEmployeeID)
         {
             try
